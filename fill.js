@@ -2,8 +2,6 @@
 function fillpage() {
   /*Get data from Heroku app api*/
   $.getJSON('https://thdbapi.herokuapp.com/api', function (data) {
-    var wtext = document.querySelector("#text");
-    wtext.innerHTML = "Tähän tulee pottukellarin olosuhde tiedot";
     var el = document.querySelector("#temp");
     el.innerHTML = "Uusin lämpötila: " + data[data.length-1][2] + String.fromCharCode(176) + "C ja suhteellinen kosteus: " + data[data.length-1][3] + "%";
     
