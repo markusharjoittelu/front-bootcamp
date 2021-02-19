@@ -60,9 +60,18 @@ function fillpage() {
 
   var data1 = [trace1, trace3];
   var data2 = [trace2, trace4];
+    
+  var layout = {
+    showlegend: true,
+    legend: {
+      x: 1,
+      xanchor: 'right',
+      y: 1.2
+    }
+  };
   
-  Plotly.newPlot('plotTemps', data1);
-  Plotly.newPlot('plotHums', data2);
+  Plotly.newPlot('plotTemps', data1, layout);
+  Plotly.newPlot('plotHums', data2, layout);
 
 });
 }
